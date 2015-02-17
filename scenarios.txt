@@ -1,0 +1,11 @@
+rails new ZombieTweets
+rails g scaffold tweet status:string zombie_id:integer
+write migration tweet
+rake db:migrate
+rails s
+rails g migration AddPrivacyToTweets private:boolean
+write migration add_location_to_tweet
+rake db:rollback
+rake db:setup
+rails console
+rake routes

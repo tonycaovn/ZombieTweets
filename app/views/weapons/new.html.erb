@@ -1,0 +1,16 @@
+<%= form_for(@weapon) do |f| %>
+  <%= f.text_field(:name) %>
+  <%= f.number_field(:ammo) %>
+  <%= f.check_box(:is_broken) %>
+  <%= f.radio_button(:condition, "New",checked: true) %>
+  <%= f.radio_button(:condition, "Rusty") %>
+  <%= f.radio_button(:condition, "Broken") %>
+  <%= f.select(:condition,['New','Rusty','Broken'])%>
+  <%= f.submit %>
+<% end %>
+
+<%= form_for([@zombie,@weapon]) do |f| %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>

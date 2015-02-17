@@ -1,0 +1,4 @@
+<h2><%= @zombie.name.titleize %></h2>
+<p>Weapons: <%= @zombie.weapon_list.to_sentence %></p>
+<p><%= pluralize(@zombie.tweets.size,'Tweet') %></p>
+<p>Money in Pocket <%= number_to_currency(@zombie.money,precision:2) %></p>
